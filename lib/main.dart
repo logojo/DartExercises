@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 //import 'package:helloworld/presentation/screens/counter/counter.dart';
-import 'package:helloworld/presentation/screens/counter/counter_functions.dart';
+//import 'package:helloworld/presentation/screens/counter/counter_functions.dart';
+import 'package:helloworld/presentation/screens/counter/practicas.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(colorSchemeSeed: Colors.cyan),
-      home: const CounterFuntions(),
+      home: const Practicas(),
     );
   }
 }

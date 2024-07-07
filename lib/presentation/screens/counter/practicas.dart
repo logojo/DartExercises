@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class CounterFuntions extends StatefulWidget {
-  const CounterFuntions({super.key});
+class Practicas extends StatefulWidget {
+  const Practicas({super.key});
 
   @override
-  State<CounterFuntions> createState() => _CounterState();
+  State<Practicas> createState() => _CounterState();
 }
 
-class _CounterState extends State<CounterFuntions> {
+class _CounterState extends State<Practicas> {
   int clickCounter = 0;
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class _CounterState extends State<CounterFuntions> {
         appBar: AppBar(
           title: const Center(
             child: Text(
-              'Counter Functions',
+              'Practicas',
               style: TextStyle(fontSize: 40),
             ),
           ),
@@ -33,8 +33,25 @@ class _CounterState extends State<CounterFuntions> {
         body: Center(
             child: Column(
                 // esto es como usar flexbox
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
+              const SizedBox(height: 25),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  FlutterLogo(
+                    size: 60,
+                  ),
+                  Text(
+                    'Jugando con rows',
+                    style: TextStyle(fontSize: 40),
+                  ),
+                  Icon(
+                    Icons.sentiment_very_satisfied,
+                    size: 50,
+                  )
+                ],
+              ),
               Text(
                 '$clickCounter',
                 style:
@@ -43,6 +60,27 @@ class _CounterState extends State<CounterFuntions> {
               Text(
                 'Click${clickCounter == 1 ? '' : 's'}',
                 style: const TextStyle(fontSize: 60),
+              ),
+              Container(
+                margin: const EdgeInsets.all(10.0),
+                height: 500,
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Text(
+                      'Espacio footer',
+                      style: TextStyle(fontSize: 30),
+                    ),
+                    Text(
+                      'Espacio footer',
+                      style: TextStyle(fontSize: 30),
+                    ),
+                    Text(
+                      'Espacio footer',
+                      style: TextStyle(fontSize: 30),
+                    ),
+                  ],
+                ),
               )
             ])),
         floatingActionButton: Column(
